@@ -1,0 +1,508 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+#include<graphics.h>
+#include<stdlib.h>
+#include<dos.h>
+int abc=0;
+int l;
+int f1=0,p=0,k=0,b=0,m=0,n=0,g=0,q=0;
+int ab=0,bc=0,cd=0,de=0,ef=0,fg=0,gh=0,hi=0;
+int x;
+void instructions()
+{
+cout<<"READ ALL THE FOLLOWING INSTRUCTIONS CAREFULLY:"<<endl;
+cout<<"=> PLAYER 1 AND PLAYER 2 HAS TO ENTER HIS/HER NAME"<<endl;
+cout<<"=>CHOOSE THE APPROPRIATE POSITION AT WHICH YOU WANT PLACE YOUR SYMBOL "<<endl;
+cout<<"    1    |    4    |    7    "<<endl;
+cout<<"         |         |         "<<endl;
+cout<<"_____________________________"<<endl;
+cout<<"    2    |    5    |    8    "<<endl;
+cout<<"         |         |         "<<endl;
+cout<<"_____________________________"<<endl;
+cout<<"    3    |    6    |    9    "<<endl;
+cout<<"         |         |         "<<endl;
+cout<<"=>YOU WILL GET ONLY ONE CHANCE AT A TIME"<<endl;
+cout<<"=>YOU HAVE TO PLAY IN SUCH A MANNER THAT ONE ROW,COLUMN"<<endl;
+cout<<" OR DIAGONAL WILL BE FILLED WITH YOUR SYMBOL"<<endl;
+cout<<"=>AT LAST THE PLAYER IS REQUESTED TO RATE THE PROGRAN AS PER HIS LEVEL"<<endl;
+}
+void main()
+{
+while(1)
+{
+clrscr();
+cout<<"**************************WELCOME TO OUR TIC TAC TOI****************************"<<endl;
+cout<<"enter 1 to know the  instruction"<<endl;
+cout<<"enter 2 to play the game"<<endl;
+cout<<"enter 0 for exit"<<endl;
+int ch;
+cin>>ch;
+clrscr();
+switch(ch)
+{
+ case 1:
+   instructions();
+     break;
+  case 2:
+char f[10],c[10];
+cout<<"player 1 enter your name ";
+cout<<endl;
+cin>>c;
+cout<<"player 2 enter your name";
+cout<<endl;
+cin>>f;
+
+int gdriver = DETECT,gmode;
+initgraph(&gdriver, &gmode, "");
+
+line(290,90,290,400);
+line(490,90,490,400);
+line(190,280,610,280);
+line(190,195,610,195);
+cout<<"# For your reference diagram is given #    1  |  4  |  7	      @       "<<endl;
+cout<<"@ Enter number between 1 to 9 @            _____________	     $ #      "<<endl;
+cout<<"% player 1 is on green corner %            2  |  5  |  8	    =+!*(     "<<endl;
+cout<<"& player 2 is on red corner &              _____________	   |={}/?@    "<<endl;
+cout<<"                                           3  |  6  |  9	  ):;=+$*&%   "<<endl;
+for(int i=0;i<9;i++)
+{
+if(i%2==0)
+{
+ b:
+
+  cout<<c<<"  your chance=>";
+
+    cin>>l;
+  sound(900);
+delay(100);
+nosound();
+ if(l==x)
+{
+
+cout<<"you cant entre this number"<<endl;
+ goto b;
+ }
+   else
+   {
+  switch(l)
+  {
+  case 1:
+  float o=2.6;
+  float p=3;
+  int x=getmaxx()/o;
+  int y=getmaxy()/p;
+  setcolor(2);
+  int q=30;
+  circle(x,y,q);
+  break;
+
+  case 2:
+  o=2.6;
+  p=2;
+  x=getmaxx()/o;
+  y=getmaxy()/p;
+  setcolor(2);
+  q=30;
+  circle(x,y,q);
+  break;
+
+  case 3:
+  o=2.6;
+  p=1.5;
+  x=getmaxx()/o;
+  y=getmaxy()/p;
+  setcolor(2);
+  q=30;
+  circle(x,y,q);
+  break;
+
+  case 4:
+  o=1.6;
+  p=3;
+  x=getmaxx()/o;
+  y=getmaxy()/p;
+  setcolor(2);
+  q=30;
+  circle(x,y,q);
+  break;
+
+  case 5:
+  o=1.6;
+  p=2;
+  x=getmaxx()/o;
+  y=getmaxy()/p;
+  setcolor(2);
+  q=30;
+  circle(x,y,q);
+  break;
+
+  case 6:
+  o=1.6;
+  p=1.5;
+  x=getmaxx()/o;
+  y=getmaxy()/p;
+  setcolor(2);
+  q=30;
+  circle(x,y,q);
+  break ;
+
+  case 7:
+  o=1.1;
+  p=3;
+  x=getmaxx()/o;
+  y=getmaxy()/p;
+  setcolor(2);
+  q=30;
+  circle(x,y,q);
+  break;
+
+  case 8:
+  o=1.1;
+  p=2;
+  x=getmaxx()/o;
+  y=getmaxy()/p;
+  setcolor(2);
+  q=30;
+  circle(x,y,q);
+  break;
+
+  case 9:
+  o=1.1;
+  p=1.5;
+  x=getmaxx()/o;
+  y=getmaxy()/p;
+  setcolor(2);
+  q=30;
+  circle(x,y,q);
+  break;
+  default:
+  cout<<"enter valid number";
+  }
+if(l==1||l==2||l==3)
+{
+f1=f1+1;
+if(f1==3)
+{
+cout<<c;
+cout<<" You are the the winner congo"<<endl;
+break;
+}
+}
+if(l==4||l==5||l==6)
+{
+p=p+1;
+if(p==3)
+{
+cout<<c<<" You are the the winner congo"<<endl;
+break;
+}
+}
+
+if(l==7||l==8||l==9)
+{
+k=k+1;
+if(k==3)
+{
+cout<<c<<" You are the the winner congo"<<endl;
+
+ break;
+ }}
+
+if(l==4||l==1||l==7)
+{
+b=b+1;
+if(b==3)
+{
+cout<<c<<" You are the the winner congo"<<endl;
+
+ break;
+ }}
+
+if(l==2||l==5||l==8)
+{
+n=n+1;
+if(n==3)
+{
+cout<<c<<" You are the the winner congo"<<endl;
+
+ break;
+ }
+ }
+if(l==3||l==9||l==6)
+{
+m=m+1;
+if(m==3)
+{
+cout<<c<<" You are the the winner congo"<<endl;
+
+ break;
+ }}
+
+if(l==1||l==5||l==9)
+{
+g=g+1;
+if(g==3)
+{
+cout<<c<<" You are the the winner congo"<<endl;
+
+ break;
+ }
+
+ }
+if(l==3||l==5||l==7)
+{
+q=q+1;
+if(q==3)
+{
+cout<<c<<" You are the winner congo"<<endl;
+
+ break;
+ }
+
+ }
+ }
+
+}
+
+ else
+
+{
+
+a:
+cout<<f<<"  your chance=>";
+
+cin>>x;
+
+ sound(900);
+delay(100);
+nosound();
+
+
+
+   if(x==l)
+{
+cout<<"you cant entre this number"<<endl;
+cout<<"Enter your number again"<<endl;
+goto a;
+}
+else
+{
+switch(x)
+{
+
+case 1:
+float n=2.6;
+float m=3;
+int x=getmaxx()/n;
+int y=getmaxy()/m;
+setcolor(4);
+int r=30;
+circle(x,y,r);
+break;
+
+case 2:
+n=2.6;
+m=2;
+x=getmaxx()/n;
+y=getmaxy()/m;
+setcolor(4);
+r=30;
+circle(x,y,r);
+break;
+
+case 3:
+n=2.6;
+m=1.5;
+x=getmaxx()/n;
+y=getmaxy()/m;
+setcolor(4);
+r=30;
+circle(x,y,r);
+break;
+
+case 4:
+n=1.6;
+m=3;
+x=getmaxx()/n;
+y=getmaxy()/m;
+setcolor(4);
+r=30;
+circle(x,y,r);
+break;
+
+case 5:
+n=1.6;
+m=2;
+x=getmaxx()/n;
+y=getmaxy()/m;
+setcolor(4);
+r=30;
+circle(x,y,r);
+break;
+
+case 6:
+n=1.6;
+m=1.5;
+x=getmaxx()/n;
+y=getmaxy()/m;
+setcolor(4);
+r=30;
+circle(x,y,r);
+break ;
+
+
+case 7:
+n=1.1;
+m=3;
+x
+=getmaxx()/n;
+y=getmaxy()/m;
+setcolor(4);
+r=30;
+circle(x,y,r);
+break;
+
+
+case 8:
+n=1.1;
+m=2;
+x=getmaxx()/n;
+y=getmaxy()/m;
+setcolor(4);
+r=30;
+circle(x,y,r);
+break;
+
+
+case 9:
+n=1.1;
+m=1.5;
+x=getmaxx()/n;
+y=getmaxy()/m;
+setcolor(4);
+r=30;
+circle(x,y,r);
+break;
+default:
+cout<<"enter valid number"<<endl;
+}
+
+//checking for the winnerp2
+if(x==1||x==2||x==3)
+{
+
+ab=ab+1;
+if(ab==3)
+{
+cout<<f<<" You are the the winner congo"<<endl;
+
+break;
+}}
+
+
+
+if(x==4||x==5||x==6)
+{
+
+
+bc=bc+1;
+if(bc==3)
+{
+cout<<f<<" You are the the winner congo"<<endl;
+
+break;
+}}
+
+
+
+if(x==7||x==8||x==9)
+{
+
+cd=cd+1;
+if(cd==3)
+{
+cout<<f<<" You are the the winner congo"<<endl;
+
+break;
+ }}
+if(x==4||x==1||x==7)
+{
+de=de+1;
+if(de==3)
+{
+cout<<f<<" You are the the winner congo"<<endl;
+
+ break;
+ }}
+if(x==2||x==5||x==8)
+{
+ef=ef+1;
+if(ef==3)
+{
+cout<<f<<" You are the the winner congo"<<endl;
+
+ break;
+ }}
+if(x==3||x==9||x==6)
+{
+fg=fg+1;
+if(fg==3)
+{
+cout<<f<<" You are the the winner congo"<<endl;
+
+ break;
+ }}
+if(x==1||x==5||x==9)
+{
+gh=gh+1;
+if(gh==3)
+{
+cout<<f<<" You are the the winner congo"<<endl;
+
+break;
+ }}
+
+
+if(x==3||x==5||x==7)
+{
+
+
+hi=hi+1;
+if(hi==3)
+{
+cout<<f<<"You are the the winner congo"<<endl;
+
+break;
+ }
+//checking close for p2
+ }
+ }
+ }}
+ f1=0,p=0,k=0,b=0,m=0,n=0,g=0,q=0;
+  ab=0,bc=0,cd=0,de=0,ef=0,fg=0,gh=0,hi=0;
+
+cout<<"You can rate us"<<endl;
+cout<<"according to your experiance"<<endl;
+cout<<"in between 1 to 10"<<endl;
+cin>>abc;
+cout<<endl;
+cout<<"thanks "<<endl;
+cout<<"Appretiated";
+
+
+break;
+//for exit
+case 0:
+exit(0);
+break;
+
+default:
+cout<<"Sahi number dalo";
+}
+getch();
+
+}
+}
